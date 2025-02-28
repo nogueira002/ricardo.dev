@@ -1,0 +1,438 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d0d0d;
+  font-family: 'Poppins';
+
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+  z-index: 1000;
+  box-sizing: border-box; 
+}
+
+.logo h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 1rem 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-left:65px ;
+  background-color: rgba(38, 38, 38, 0.6);
+  border-radius: 50px;
+  font-size: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #262626;
+
+  
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #7a7a7ac6;
+  font-size: 1rem;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-links li a {
+  text-decoration: none !important;
+  color: inherit; /* Mantém a cor do texto sem mudar */
+  display: inline-block; /* Garante que o link ocupa apenas o espaço do texto */
+}
+
+
+.nav-links li:hover {
+  color:  #868585;
+}
+
+/* Botão de contacto */
+.contact-button {
+  padding: 1rem 1.5rem;
+  background-color: rgba(38, 38, 38, 0.6);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border: 1px solid #262626;
+}
+
+.contact-button a{
+  text-decoration: none !important;
+  color: inherit; /* Mantém a cor do texto sem mudar */
+  display: inline-block; /* Garante que o link ocupa apenas o espaço do texto */
+}
+
+.contact-button:hover {
+  background-color: #262626;
+  transform: scale(1);
+}
+
+/* Ajustes para o layout responsivo */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* Permite que os elementos quebrem para uma nova linha */
+    padding: 1rem;
+  }
+
+  .nav-links {
+    justify-content: space-around; /* Ajusta o espaçamento em telas pequenas */
+    gap: 1rem;
+  }
+
+  .contact-button {
+    margin-top: 1rem; /* Dá espaço extra quando quebra linha */
+  }
+}
+
+/* main-content */
+.main-content {
+  margin-top: 100px; /* Espaço para compensar a navbar fixa */
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #7D7F78;
+
+  /* Centralização usando Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction h1 {
+  font-size: 80px;
+  margin-bottom: 3rem;
+ 
+  font-style: normal;
+  font-weight: 500;
+  line-height: 92px;
+  letter-spacing: -2.4px;
+
+  /* Gradient background */
+  background: linear-gradient(243.33deg, #FFFFF7 8.55%, #727267 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.introduction p {
+  width: 429.45px; /* Define a largura */
+  height: auto; /* Permite que o texto cresça, se necessário */
+  text-align: center; /* Garante que o texto fique alinhado no centro */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  line-height: 1.5; /* Melhor espaçamento entre linhas */
+  
+}
+
+.input-contact{
+  border: 1px solid #262626;
+  border-radius: 50px;
+  gap: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  padding: 0.7rem 1rem;
+  
+
+}
+
+.input-contact input{
+   color: #adadad;
+   background-color: transparent;
+   border-bottom: #3b3b3b;
+   border: none;
+   font-size: 16px;
+}
+.input-contact  input:focus {
+  outline: none; /* Remove o contorno padrão do navegador */
+  border: none; /* Remove a borda */
+}
+
+.input-contact button{
+  background-color:rgb(46, 48, 157) ;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #a9a7a7;
+  -webkit-box-shadow: 62px 22px 300px 0px rgba(46,0,145,1);
+  -moz-box-shadow: 62px 22px 300px 0px rgba(46,0,145,1);
+  box-shadow: 62px 22px 300px 0px rgba(46,0,145,1);
+}
+
+.about{
+  margin-top: 10px;
+  font-weight: 200;
+}
+.about h6 {
+  color: rgb(0, 85, 255);
+  font-size: 18px;
+  top: 0;
+  font-weight: 200;
+  
+}
+
+.titile{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: -30px;
+}
+
+.paragraph{
+  margin-top: 0;
+  font-weight: 200;
+}
+.about p {
+  top: 0;
+  width: 429.45px; /* Define a largura */
+  height: auto; /* Permite que o texto cresça, se necessário */
+  text-align: center; /* Garante que o texto fique alinhado no centro */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  line-height: 1.5; /* Melhor espaçamento entre linhas */
+  font-size: 20px;
+  color: #4D4D4D;
+  font-family: Poppins;
+
+}
+
+.about p span {
+
+  color: #CCCCCC;
+}
+
+
+.project-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 10px;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  justify-content: center;
+}
+.project-item {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(20,20,20,1) 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #262626;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards por linha */
+  max-width: calc(33.333% - 1.5rem);
+}
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #CCCCCC;
+  margin: 0;
+}
+
+.project-description {
+  width: 100%;
+  text-align: left;
+  line-height: 1.5;
+  color: #7A7A7A;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+.project-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #262626;
+}
+
+.project-date {
+  color: #7A7A7A;
+  font-size: 0.875rem;
+  width: 50%;
+}
+
+.project-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: rgb(46, 48, 157);
+  color: #a9a7a7;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+
+
+
+.project-button:hover {
+  background-color:rgb(40, 42, 133) ;
+  transform: scale(1);
+
+}
+
+
+
+/*Contactos*/
+.container {
+  margin: 30px auto; /* 30px de margem em todos os lados e centraliza horizontalmente */
+  margin-top: 150px;
+  padding: 0 20px; /* Opcional: adiciona um pequeno padding lateral para evitar que o conteúdo fique colado às bordas */
+  display: flex; /* Opcional: útil se quiseres alinhar elementos internos */
+  justify-content: center; /* Centraliza o conteúdo interno */
+  height: 100%;
+}
+
+
+
+/*footer */
+
+/* O conteúdo principal expande-se para empurrar o footer para baixo */
+.main-content {
+  flex: 1;
+}
+
+
+/* Estiliza o footer e fixa-o no final */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(20,20,20,1) 100%);
+  color: white;
+  text-align: center;
+  height: 20%;
+}
+
+
+
+
+/*Projetos detalhes*/
+/* Projetos */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 100px;
+}.project-container-project-detalhes {
+  display: flex;
+  flex-direction: row; /* Manter lado a lado */
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 21px;
+  width: 389px; /* Largura do card */
+  height: 659.92px; /* Altura fixa do card */
+  background: #0f0f10;
+  border: 1px solid #19191a;
+  border-radius: 32px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-details {
+  padding: 20px;
+  border-radius: 8px;
+  width: 389px; /* Mesma largura do card */
+  align-self: flex-start; /* Garante que a altura seja conforme o conteúdo */
+  overflow: auto; /* Caso o conteúdo ultrapasse, barra de rolagem */
+}
+
+.project-details h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.project-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-details ul li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-details p {
+  color: #666;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.project-card p {
+  color: #777;
+}

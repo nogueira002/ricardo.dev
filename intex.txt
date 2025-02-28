@@ -1,0 +1,21 @@
+<section >
+<div className="job-search-section">
+
+      <div className="container">
+        <h2 className="section-title">Explore more <span>Tasks</span></h2>
+        <form className="search-form" (ngSubmit)="onSubmit()">
+          <div className="input-group">
+            <label for="searchInput" className="visually-hidden">Search for tasks or worker</label>
+            <input type="text" id="searchInput" placeholder="Search for tasks or worker..." className="search-input" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14bee0bbb12d2f4804a9b9e4e4606e502cebe20d45d7673f5a82548f81b2b830?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" className="search-icon" />
+          </div>
+          <div className="dropdown">
+            <button type="button" className="dropdown-toggle">
+              Task/worker
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bce9488900eb80dba422eb9cb282d3a74a0f0c827a286dbddb4e7e98f0dd6ee?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" className="dropdown-icon" />
+            </button>
+          </div>
+          <button type="submit" className="search-button">Search</button>
+        </form>
+      </div>
+</div>
