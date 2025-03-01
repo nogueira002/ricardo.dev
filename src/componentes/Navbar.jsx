@@ -4,6 +4,19 @@ import "../App.css";
 
 const Navbar = () => {
   return (
+    <>
+    <nav className="navbar-nobile">
+        <div className="logo-nobile">
+          <h1>
+            <span>
+              <img src={LogoRN} alt="Logo" width={70} height={70} />
+            </span>
+          </h1>
+        </div>
+        <button className="contact-button-nobile">
+        <Link to="/contacto">Contacto</Link>
+      </button>
+    </nav>
     <nav className="navbar">
       <div className="logo">
         <h1>
@@ -27,6 +40,7 @@ const Navbar = () => {
         <Link to="/contacto">Contacto</Link>
       </button>
     </nav>
+    </>
   );
 };
 

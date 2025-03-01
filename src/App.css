@@ -24,6 +24,9 @@ body, html {
   box-sizing: border-box; 
 }
 
+.navbar-nobile{
+  display: none;
+}
 .logo h1 {
   margin: 0;
   color: #ffffff;
@@ -91,22 +94,7 @@ body, html {
   transform: scale(1);
 }
 
-/* Ajustes para o layout responsivo */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap; /* Permite que os elementos quebrem para uma nova linha */
-    padding: 1rem;
-  }
 
-  .nav-links {
-    justify-content: space-around; /* Ajusta o espaçamento em telas pequenas */
-    gap: 1rem;
-  }
-
-  .contact-button {
-    margin-top: 1rem; /* Dá espaço extra quando quebra linha */
-  }
-}
 
 /* main-content */
 .main-content {
@@ -211,6 +199,7 @@ body, html {
 .paragraph{
   margin-top: 0;
   font-weight: 200;
+  
 }
 .about p {
   top: 0;
@@ -435,4 +424,268 @@ body, html {
 
 .project-card p {
   color: #777;
+}
+
+
+
+/* Media Queries */
+
+/* Para dispositivos pequenos (móveis) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    display: none;
+  }
+  .navbar-nobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ajusta para espaço entre os itens */
+    align-items: center; /* Garante que os itens estejam alinhados verticalmente */
+    width: 90%; /* Certifica-se que a barra de navegação ocupe toda a largura */
+    margin: 10px;
+  }
+  
+  .contact-button-nobile {
+    padding: 10px 20px; /* Define o padding de forma adequada */
+    background-color: rgba(38, 38, 38, 0.6);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid #262626;
+    text-align: center; /* Garante que o texto no botão esteja centralizado */
+  }
+
+  .contact-button-nobile a{
+    text-decoration: none;
+    color: white;
+  }
+  
+
+ 
+
+  /* Main Content */
+  .main-content {
+    margin-top: -100px;
+  
+   
+  }
+  .introduction{
+    margin-top: 0px;
+  }
+
+  .introduction h1 {
+    font-size: 40px;
+   
+  }
+
+  .introduction p{
+    margin-top: -30px;
+  }
+
+  .input-contact {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  .input-contact input {
+    font-size: 14px;
+  }
+
+  .input-contact button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+
+
+  .project-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem;
+    height: auto;
+  }
+
+  /* Project Details */
+  .project-container-project-detalhes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .project-details {
+    width: 100%;
+  }
+}
+
+/* Para dispositivos maiores (tablets e acima) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 1rem 5rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  /* Main Content */
+  .main-content {
+    padding: 3rem 2rem;
+  }
+
+  .introduction h1 {
+    font-size: 70px;
+  }
+
+  .input-contact {
+    flex-direction: row;
+  }
+
+  .input-contact button {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+
+  .project-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards por linha */
+    max-width: calc(50% - 1rem);
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+
+  .project-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  /* Project Details */
+  .project-container-project-detalhes {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .project-card {
+    width: 50%;
+    padding: 30px;
+  }
+
+  .project-details {
+    width: 50%;
+  }
+}
+
+/* Para dispositivos maiores (desktops) */
+@media (min-width: 1025px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 1rem 10rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Main Content */
+  .main-content {
+    padding: 4rem 2rem;
+  }
+
+  .introduction h1 {
+    font-size: 80px;
+  }
+
+  .input-contact {
+    flex-direction: row;
+  }
+
+  .input-contact input {
+    font-size: 16px;
+  }
+
+  .input-contact button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  .project-item {
+    flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards por linha */
+    max-width: calc(33.333% - 1.5rem);
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 18px;
+  }
+
+  .project-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    height: 20%;
+  }
+
+  /* Project Details */
+  .project-container-project-detalhes {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .project-card {
+    width: 389px;
+    padding: 40px;
+  }
+
+  .project-details {
+    width: 389px;
+  }
 }
