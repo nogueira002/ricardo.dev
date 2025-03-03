@@ -199,7 +199,6 @@ body, html {
 .paragraph{
   margin-top: 0;
   font-weight: 200;
-  
 }
 .about p {
   top: 0;
@@ -350,54 +349,128 @@ body, html {
 
 /*Projetos detalhes*/
 /* Projetos */
-.main-container {
+
+/* Improved Project Details Styling */
+
+.loading {
+  color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: flex-start; /* Changed from center to flex-start */
   align-items: flex-start;
   padding: 20px;
   margin-top: 100px;
-}.project-container-project-detalhes {
+  width: 100%;
+  max-width: 1200px; /* Added max-width for larger screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-container-project-detalhes {
   display: flex;
-  flex-direction: row; /* Manter lado a lado */
-  gap: 20px;
+  flex-direction: row;
+  gap: 30px; /* Increased gap as requested */
   padding: 20px;
+  width: 100%; /* Changed from 50% to 100% to use full container width */
+  max-width: 1000px;
 }
 
 .project-card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  gap: 21px;
-  width: 389px; /* Largura do card */
-  height: 659.92px; /* Altura fixa do card */
+  padding: 0; /* Remove overall padding */
+  height: auto;
+  min-height: 600px;
   background: #0f0f10;
-  border: 1px solid #19191a;
+  border: 1px solid #19191A;
   border-radius: 32px;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  width: 389px;
+  flex-shrink: 0;
+  overflow: hidden; /* Ensures image stays within border radius */
 }
 
 .project-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0; /* Remove border radius */
+  margin-bottom: 0; /* Remove bottom margin */
+  border-top-left-radius: 32px; /* Match top corners with card */
+  border-top-right-radius: 32px;
+  background-color: #0d0d0d;
+}
+
+.project-content {
+  margin-top: 60px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-card hr {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #19191A;
+  margin: 20px 0;
+}
+
+.project-card h2 {
+  color: white;
+  font-size: 35px;
+  margin-top: 0; /* Remove top margin since it's in a padded container */
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.project-card p {
+  width: 100%;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  color: #CDCBCC;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+
+/* Placeholder for when there's no image */
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  background: #19191A;
+  color: gray;
+  font-size: 14px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  margin-bottom: 0;
 }
 
 .project-details {
-  padding: 20px;
-  border-radius: 8px;
-  width: 389px; /* Mesma largura do card */
-  align-self: flex-start; /* Garante que a altura seja conforme o conteúdo */
-  overflow: auto; /* Caso o conteúdo ultrapasse, barra de rolagem */
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%; /* Changed to use available space */
+  max-width: 500px;
+  overflow: auto;
+  height: auto;
+  max-height: 600px; /* Match height of project card */
 }
 
 .project-details h3 {
-  margin-top: 20px;
-  color: #333;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
 .project-details ul {
@@ -406,286 +479,409 @@ body, html {
 }
 
 .project-details ul li {
-  background-color: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #191919;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #262626;
+}
+
+.project-details ul li div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-details ul li p {
+  margin: 5px 0;
+  color: #CDCBCC;
+}
+
+.project-details ul li div:first-child p:first-child {
+  font-weight: 600;
+  color: white;
+}
+
+.project-details ul li div:first-child p:last-child {
+  font-size: 12px;
+  color: #7A7A7A;
+}
+
+.project-details ul li div:last-child {
+  color: #CDCBCC;
+  line-height: 1.5;
 }
 
 .project-details p {
-  color: #666;
+  color: #7A7A7A;
 }
 
-.project-card h2 {
-  font-size: 1.5rem;
-  margin-top: 15px;
-}
 
-.project-card p {
-  color: #777;
-}
 
 
 
 /* Media Queries */
 
 /* Para dispositivos pequenos (móveis) */
-@media (max-width: 768px) {
 
-  /* Navbar */
+/* Media Queries - Improved */
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  /* Navbar adjustments */
   .navbar {
     display: none;
   }
+  
   .navbar-nobile {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Ajusta para espaço entre os itens */
-    align-items: center; /* Garante que os itens estejam alinhados verticalmente */
-    width: 90%; /* Certifica-se que a barra de navegação ocupe toda a largura */
-    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   
   .contact-button-nobile {
-    padding: 10px 20px; /* Define o padding de forma adequada */
+    padding: 1rem 1.5rem;
     background-color: rgba(38, 38, 38, 0.6);
     color: #ffffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     border: 1px solid #262626;
-    text-align: center; /* Garante que o texto no botão esteja centralizado */
+    margin-right: 30px;
   }
 
   .contact-button-nobile a{
     text-decoration: none;
     color: white;
   }
-  
-
- 
 
   /* Main Content */
   .main-content {
-    margin-top: -100px;
+    margin-top: 70px;
+    padding: 2rem 1rem;
+    margin-top: 100px;
+  }
   
-   
-  }
-  .introduction{
-    margin-top: 0px;
-  }
-
   .introduction h1 {
-    font-size: 40px;
-   
+    font-size: 42px;
+    line-height: 72px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
   }
-
-  .introduction p{
-    margin-top: -30px;
+  
+  .introduction p {
+    width: 100%;
+    max-width: 320px;
+    font-size: 14px;
   }
-
+  
   .input-contact {
     flex-direction: column;
-    gap: 20px;
-    padding: 1rem;
+    gap: 35px;
+    width: 80%;
+    margin: 30px auto 0;
   }
-
+  
   .input-contact input {
-    font-size: 14px;
+    width: 60%;
+    padding: 10px 5px;
   }
-
+  
   .input-contact button {
-    padding: 10px 20px;
-    font-size: 14px;
+    width: 30%;
+    padding: 10px 0;
+  }
+  
+  /* About section */
+  .about p {
+    width: 100%;
+    max-width: 320px;
+    font-size: 17px;
   }
 
-
-
+ 
+  
+  /* Projects */
+  .project-container {
+    padding: 1rem;
+    margin-top: -20px;
+  }
+  
+  .project-list {
+    gap: 1rem;
+  }
+  
   .project-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
-
-  .project-content {
-    padding: 1rem;
-  }
-
+  
   .project-title {
-    font-size: 1rem;
+    font-size: 16px;
   }
-
+  
   .project-description {
     font-size: 14px;
   }
-
+  
+  .project-footer {
+    padding: 0.75rem;
+  }
+  
   .project-button {
-    padding: 10px 20px;
+    padding: 8px 15px;
     font-size: 14px;
   }
-
-  /* Footer */
-  .footer {
-    padding: 1rem;
-    height: auto;
+  
+  /* Project Details */
+  .loading{
+    color: white;
   }
 
-  /* Project Details */
   .project-container-project-detalhes {
     flex-direction: column;
-    gap: 20px;
+    padding: 10px;
   }
 
+  .project-container-project-detalhes p{
+    color: white;
+  }
+  
   .project-card {
     width: 100%;
+    height: auto;
     padding: 20px;
+    gap: 15px;
   }
-
+  
   .project-details {
-    width: 100%;
+    width: 95%;
+    padding: 15px;
+  }
+  
+  /* Footer */
+  .footer {
+    height: auto;
+    padding: 15px 0;
   }
 }
 
-/* Para dispositivos maiores (tablets e acima) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Medium mobile devices (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Navbar */
+  .navbar {
+    display: none;
+  }
+  
+  .navbar-nobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 13, 13, 0.95);
+    z-index: 1000;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-top: 80px;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .introduction h1 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
+  }
+  
+  .introduction p {
+    width: 90%;
+    max-width: 380px;
+    font-size: 15px;
+  }
+  
+  .input-contact {
+    width: 90%;
+    margin: 40px auto 0;
+  }
+  
+  /* Projects */
+  .project-container {
+    padding: 1.5rem;
+  }
+  
+  .project-list {
+    gap: 1.25rem;
+  }
+  
+  .project-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  /* Project Details */
+  .project-container-project-detalhes {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .project-card {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+  
+  .project-details {
+    width: 95%;
+  }
+}
 
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Navbar */
+  .navbar {
+    padding: 1rem 3rem;
+  }
+  
+  .navbar-nobile {
+    display: none;
+  }
+  
+  .nav-links {
+    padding: 0.75rem 1.5rem;
+    gap: 1rem;
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-button {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-top: 90px;
+    padding: 3rem 2rem;
+  }
+  
+  .introduction h1 {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -2px;
+  }
+  
+  .introduction p {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .input-contact {
+    gap: 30px;
+  }
+  
+  /* Projects */
+  .project-list {
+    gap: 1.25rem;
+  }
+  
+  .project-item {
+    flex: 1 1 calc(50% - 1.25rem);
+    max-width: calc(50% - 1.25rem);
+  }
+  
+  /* Project Details */
+  .project-container-project-detalhes {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .project-card {
+    width: 90%;
+    max-width: 389px;
+    height: auto;
+    padding: 30px;
+  }
+  
+  .project-details {
+    width: 85%;
+    max-width: 389px;
+    margin-top: 20px;
+  }
+}
+
+/* Small desktops (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
   /* Navbar */
   .navbar {
     padding: 1rem 5rem;
   }
-
+  
+  .navbar-nobile {
+    display: none;
+  }
+  
   .nav-links {
-    flex-direction: row;
-    padding: 1rem 2rem;
-    gap: 1rem;
+    margin-left: 40px;
   }
-
+  
   /* Main Content */
-  .main-content {
-    padding: 3rem 2rem;
-  }
-
   .introduction h1 {
     font-size: 70px;
+    line-height: 80px;
   }
-
-  .input-contact {
-    flex-direction: row;
-  }
-
-  .input-contact button {
-    padding: 10px 25px;
-    font-size: 15px;
-  }
-
+  
+  /* Projects */
   .project-item {
-    flex: 1 1 calc(50% - 1rem); /* 2 cards por linha */
-    max-width: calc(50% - 1rem);
+    flex: 1 1 calc(33.333% - 1.5rem);
+    max-width: calc(33.333% - 1.5rem);
   }
-
-  .project-title {
-    font-size: 1.2rem;
-  }
-
-  .project-description {
-    font-size: 16px;
-  }
-
-  .project-button {
-    padding: 12px 25px;
-    font-size: 16px;
-  }
-
+  
   /* Project Details */
   .project-container-project-detalhes {
-    flex-direction: row;
     gap: 30px;
-  }
-
-  .project-card {
-    width: 50%;
-    padding: 30px;
-  }
-
-  .project-details {
-    width: 50%;
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
 
-/* Para dispositivos maiores (desktops) */
-@media (min-width: 1025px) {
-
-  /* Navbar */
-  .navbar {
-    padding: 1rem 10rem;
+/* Large desktops (1280px and above) */
+@media (min-width: 1280px) {
+  /* Navbar remains as defined in the main CSS */
+  .navbar-nobile {
+    display: none;
   }
-
-  .nav-links {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .logo h1 {
-    font-size: 1.5rem;
-  }
-
-  /* Main Content */
+  
+  /* Main content remains largely as defined in the main CSS */
   .main-content {
-    padding: 4rem 2rem;
+    margin-top: 120px;
   }
-
-  .introduction h1 {
-    font-size: 80px;
-  }
-
-  .input-contact {
-    flex-direction: row;
-  }
-
-  .input-contact input {
-    font-size: 16px;
-  }
-
-  .input-contact button {
-    padding: 10px 30px;
-    font-size: 16px;
-  }
-
-  .project-item {
-    flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards por linha */
-    max-width: calc(33.333% - 1.5rem);
-  }
-
-  .project-title {
-    font-size: 1.25rem;
-  }
-
-  .project-description {
-    font-size: 18px;
-  }
-
-  .project-button {
-    padding: 15px 30px;
-    font-size: 16px;
-  }
-
-  /* Footer */
-  .footer {
-    height: 20%;
-  }
-
-  /* Project Details */
+  
+  /* Project Details - ensure proper sizing */
   .project-container-project-detalhes {
-    flex-direction: row;
-    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
   }
-
-  .project-card {
-    width: 389px;
-    padding: 40px;
-  }
-
-  .project-details {
+  
+  .project-card, .project-details {
     width: 389px;
   }
 }
