@@ -3,9 +3,6 @@ import Logo from "../assets/SVG.png";
 import Navbar from "../componentes/Navbar";
 import Project from "../componentes/project"; 
 
-
-
-
 const Main = () => {
     return <>
     {/* Navbar */}

@@ -675,7 +675,7 @@ body, html {
 }
 
 /* Medium mobile devices (481px to 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
   /* Navbar */
   .navbar {
     display: none;
@@ -691,7 +691,6 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(13, 13, 13, 0.95);
     z-index: 1000;
   }
   
@@ -702,7 +701,7 @@ body, html {
   }
   
   .introduction h1 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 50px;
     letter-spacing: -1.5px;
   }
@@ -748,6 +747,11 @@ body, html {
     width: 95%;
   }
 }
+
+
+
+
+
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
