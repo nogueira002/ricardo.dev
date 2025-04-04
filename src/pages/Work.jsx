@@ -5,7 +5,7 @@ const Work = () => {
     <>
      <Navbar />
      <div className="container">
-        <h1>Projetos</h1><br></br>
+        <h1>Projetossssss</h1><br></br>
       </div>
     </>
     );
