@@ -177,7 +177,7 @@ const ProjectPage = () => {
                     />
                   </div>
                   
-                  <div className="form-group">
+                  <div className="input-contact">
                     <label htmlFor="comment">Comentário:</label>
                     <textarea
                       id="comment"
