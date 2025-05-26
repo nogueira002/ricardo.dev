@@ -182,6 +182,7 @@ const ProjectPage = () => {
                     <textarea
                       id="comment"
                       name="comment"
+                      className="input-textarea"
                       value={formData.comment}
                       onChange={handleInputChange}
                       placeholder="Escreve o teu comentário..."
