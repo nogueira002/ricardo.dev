@@ -179,7 +179,7 @@ const ProjectPage = () => {
                   
                   <div className="input-contact">
                     <label htmlFor="comment">Comentário:</label>
-                    <textarea
+                    <input
                       id="comment"
                       name="comment"
                       className="input-textarea"
