@@ -516,14 +516,24 @@ body, html {
   color: #7A7A7A;
 }
 .comment-form {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #191919;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  color: #ffffff;
+
 }
 
 .form-group {
   margin-bottom: 15px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .form-group label {

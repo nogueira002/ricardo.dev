@@ -163,7 +163,7 @@ const ProjectPage = () => {
               <div className="comment-form">
                 <h4>Adicionar Comentário</h4>
                 <form onSubmit={handleSubmitComment}>
-                  <div className="form-group">
+                  <div className="input-contact">
                     <label htmlFor="userName">Nome:</label>
                     <input
                       type="text"
