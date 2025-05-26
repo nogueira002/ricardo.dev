@@ -179,18 +179,19 @@ const ProjectPage = () => {
                   
                   <div className="input-contact">
                     <label htmlFor="comment">Comentário:</label>
-                    <input
+                    <textarea
                       id="comment"
                       name="comment"
                       className="input-textarea"
                       value={formData.comment}
                       onChange={handleInputChange}
                       placeholder="Escreve o teu comentário..."
-                      rows="4"
+                      rows="6"
                       disabled={isSubmitting}
                       required
                     />
                   </div>
+                  <br></br>
                   
                   <div className="form-buttons">
                     <button 
