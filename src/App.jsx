@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Work from "./pages/Work";
 import Contacto from "./pages/Contacto";
 import Main from "./pages/Main";
 import ProjetoDetalhes from "./pages/ProjectsDetalhes"
