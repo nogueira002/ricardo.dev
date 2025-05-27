@@ -13,7 +13,7 @@ function App() {
       
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/work" element={<Work />} />
+          
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/projetos/:id" element={<ProjetoDetalhes />} /> {/* Rota com ID */}
         </Routes>
